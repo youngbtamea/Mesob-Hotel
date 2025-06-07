@@ -6,6 +6,7 @@ import admin.Admin_login;
 
 public class MesobHotel {
     private static void customer_log_sign(){
+        Scanner s = new Scanner(System.in);
         System.out.println("1. Customer Login \n2. Customer Sign Up");
         System.out.println("Enter your choice: ");
         int choice2;
@@ -34,8 +35,9 @@ public class MesobHotel {
         System.out.println("1. Admin \n2. Customer");
         
         int choice;
-        Scanner s = new Scanner(System.in);
+        
         System.out.print("Enter your choice: ");
+        Scanner s = new Scanner(System.in);
         choice = s.nextInt();
         
         switch (choice){
