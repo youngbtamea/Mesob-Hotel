@@ -20,7 +20,7 @@ public class Admin_login {
         System.out.println("Enter password: ");
         password = s.next();
         
-        if (user_name == admin_username && password == admin_password){
+        if (user_name.equals(admin_username)  && password.equals(admin_password) ){
             System.out.println("Access Granted! ");
             //method called
             
