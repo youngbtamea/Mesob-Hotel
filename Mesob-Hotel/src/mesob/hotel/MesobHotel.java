@@ -1,20 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package mesob.hotel;
 
-/**
- *
- * @author TOSHIBA
- */
+
 public class MesobHotel {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("                                         ╔════════════════════════════════════╗\n" +
+
+"                                         ║    WELCOME TO MESOB HOTEL     ║\n" +
+"                                         ╚════════════════════════════════════╝");
+        System.out.println("\n \n Welcome to our iconic Mesob Hotel, Where comfort meets tradition");
+        System.out.println("\nPlease make a choice: ");
+        System.out.println("1. Admin \n2. Customer");
+        
     }
     
 }
