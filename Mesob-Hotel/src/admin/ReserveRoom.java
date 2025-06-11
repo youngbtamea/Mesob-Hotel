@@ -15,6 +15,8 @@ public class ReserveRoom {
             File file = new File("roomsinfo.txt");
             if (!file.exists()) {
                 System.out.println("No room data found.");
+                new Admin_home();
+                System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
                 return;
             }
 
@@ -63,6 +65,8 @@ public class ReserveRoom {
                 found = true;
                 if (rooms[i][3].equalsIgnoreCase("Reserved")) {
                     System.out.println("Room is already reserved.");
+                    new Admin_home();
+                    System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
                     return;
                 }
 
@@ -78,7 +82,10 @@ public class ReserveRoom {
 
         if (!found) {
             System.out.println("Room not found.");
+            new Admin_home();
+            System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
             return;
+           
         }
 
         // Step 5: Save updated data
@@ -90,6 +97,8 @@ public class ReserveRoom {
             }
             writer.close();
             System.out.println("Room reserved successfully!");
+            new Admin_home();
+            System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
         } catch (IOException e) {
             System.out.println("Error writing to file: " + e.getMessage());
         }

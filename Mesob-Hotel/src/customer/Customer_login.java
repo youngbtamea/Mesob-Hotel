@@ -22,9 +22,11 @@ public class Customer_login {
 
         // Check credentials
         if (validateLogin()) {
-            System.out.println("Login successful! Welcome, " + username);
+            System.out.println("Login successful! Welcome :), " + username);
+            new Customer_Home();
         } else {
             System.out.println("Login failed! Invalid username or password.");
+            new Customer().customer_account();
         }
     }
 
@@ -51,6 +53,8 @@ public class Customer_login {
             fileScanner.close();
         } catch (FileNotFoundException e) {
             System.out.println("User informaion can't find,  Sign up first");
+            new Customer().customer_account();
+            System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
         }
 
         return false;

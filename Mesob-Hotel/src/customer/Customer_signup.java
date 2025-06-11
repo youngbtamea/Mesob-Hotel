@@ -33,6 +33,7 @@ public class Customer_signup {
                 break;
             } else {
                 System.out.println("Passwords do not match! Try again.");
+                new Customer().customer_account();
             }
         }
 
@@ -47,8 +48,11 @@ public class Customer_signup {
             writer.close();
             System.out.println("Signup successful! Account created.");
             new Customer_login();
+            System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
         } catch (IOException e) {
             System.out.println("Error saving user data: " + e.getMessage());
+            new Customer().customer_account();
+            System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
         }
     }
     

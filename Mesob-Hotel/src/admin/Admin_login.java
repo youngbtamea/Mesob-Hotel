@@ -20,11 +20,13 @@ public class Admin_login {
             System.out.println("Access Granted! ");
             //method called
             Admin_home admin_home = new Admin_home();
+            System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
             
         }else{
             System.out.println("Access Denied!!! UserName or Password incorrect!");
             while(true){
                 check_admin_login();
+                System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
             }
         }
         

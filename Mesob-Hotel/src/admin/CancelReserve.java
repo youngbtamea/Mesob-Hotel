@@ -15,6 +15,8 @@ public class CancelReserve {
             File file = new File("roomsinfo.txt");
             if (!file.exists()) {
                 System.out.println("No room data found.");
+                new Admin_home();
+                System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
                 return;
             }
 
@@ -40,6 +42,8 @@ public class CancelReserve {
             fileScanner.close();
         } catch (Exception e) {
             System.out.println("Error reading file: " + e.getMessage());
+            new Admin_home();
+            System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
             return;
         }
 
@@ -53,6 +57,8 @@ public class CancelReserve {
                 found = true;
                 if (!rooms[i][3].equalsIgnoreCase("Reserved")) {
                     System.out.println("Room is not reserved.");
+                    new Admin_home();
+                    System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
                     return;
                 }
 
@@ -60,12 +66,16 @@ public class CancelReserve {
                 rooms[i][3] = "Available";
                 rooms[i][4] = "None";
                 System.out.println("Reservation canceled successfully.");
+                new Admin_home();
+                System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
                 break;
             }
         }
 
         if (!found) {
             System.out.println("Room not found.");
+            new Admin_home();
+            System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
             return;
         }
 
@@ -79,6 +89,8 @@ public class CancelReserve {
             writer.close();
         } catch (IOException e) {
             System.out.println("Error saving file: " + e.getMessage());
+            new Admin_home();
+            System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
         }
     }
 }

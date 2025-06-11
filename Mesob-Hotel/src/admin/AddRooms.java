@@ -35,8 +35,12 @@ public class AddRooms {
             writer.write(roomNumber + "," + roomType + "," + price + "\n");
             writer.close();
             System.out.println("Room added successfully!");
+            System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
+            new Admin_home();
         } catch (IOException e) {
             System.out.println("Error writing to file: " + e.getMessage());
+            System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
+            new Admin_home();
         }
     }
 }

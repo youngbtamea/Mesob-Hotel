@@ -46,7 +46,7 @@ public class EditRooms {
 
         // Ask for room to edit
         System.out.print("\nEnter the Room Number you want to edit: ");
-        String target = sc.nextLine();
+        String target = sc.next();
         boolean found = false;
 
         for (int i = 0; i < count; i++) {
@@ -54,13 +54,13 @@ public class EditRooms {
                 found = true;
 
                 System.out.print("Enter new Room Number: ");
-                rooms[i][0] = sc.nextLine();
+                rooms[i][0] = sc.next();
 
                 System.out.print("Enter new Room Type: ");
-                rooms[i][1] = sc.nextLine();
+                rooms[i][1] = sc.next();
 
                 System.out.print("Enter new Room Price: ");
-                rooms[i][2] = sc.nextLine();
+                rooms[i][2] = sc.next();
 
                 break;
             }
@@ -68,6 +68,8 @@ public class EditRooms {
 
         if (!found) {
             System.out.println("Room not found!");
+            new Admin_home();
+            System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
             return;
         }
 
@@ -79,6 +81,8 @@ public class EditRooms {
             }
             writer.close();
             System.out.println("Room updated successfully!");
+            new Admin_home();
+            System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
         } catch (IOException e) {
             System.out.println("Error writing file: " + e.getMessage());
         }

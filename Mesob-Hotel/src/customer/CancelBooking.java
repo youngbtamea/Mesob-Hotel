@@ -19,6 +19,7 @@ public class CancelBooking {
             File file = new File(QUEUE_FILE);
             if (!file.exists()) {
                 System.out.println("No bookings found.");
+                new Customer_Home();
                 return;
             }
 
@@ -44,12 +45,18 @@ public class CancelBooking {
 
             if (found) {
                 System.out.println("✅ Booking for Room " + cancelRoomNumber + " has been cancelled.");
+                new Customer_Home();
+                System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
             } else {
                 System.out.println("❌ No booking found for Room " + cancelRoomNumber + ".");
+                new Customer_Home();
+                System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
             }
 
         } catch (IOException e) {
             System.out.println("Error processing cancellation: " + e.getMessage());
+            new Customer_Home();
+            System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
         }
     }
 }

@@ -13,17 +13,22 @@ public class Customer_Home {
             case 1:
                 System.out.println("redirecting to availablerooms ");
                 new AvailableRooms();
+                System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
                 break;
             case 2:
                 System.out.println("redirecting to book room ");
                 new Booking();
+                System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
                 break;
             case 3:
                 System.out.println("redirecting to Cancle Booking ");
                 new CancelBooking();
+                System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
                 break;
             default:
                 System.out.println("unable to reach...! ");
+                new Customer().customer_account();
+                System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
         }
         
     }

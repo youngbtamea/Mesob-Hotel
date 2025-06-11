@@ -6,30 +6,30 @@ import customer.Customer;
 
 
 public class MesobHotel {
-    private static void customer_log_sign(){
-        Scanner s = new Scanner(System.in);
-        System.out.println("1. Customer Login \n2. Customer Sign Up");
-        System.out.println("Enter your choice: ");
-        int choice2;
-        choice2 = s.nextInt();
-        switch(choice2){
-            case 1:
-                //class called signin
-                break;
-            case 2:
-                //class signup called
-                break;
-            default:
-                System.out.println("Invalid input!!! ");
-                break;
-        }
-        
-    }
+//    private static void customer_log_sign(){
+//        Scanner s = new Scanner(System.in);
+//        System.out.println("1. Customer Login \n2. Customer Sign Up");
+//        System.out.println("Enter your choice: ");
+//        int choice2;
+//        choice2 = s.nextInt();
+//        switch(choice2){
+//            case 1:
+//                //class called signin
+//                break;
+//            case 2:
+//                //class signup called
+//                break;
+//            default:
+//                System.out.println("Invalid input!!! ");
+//                break;
+//        }
+//        
+//    }
 
     public static void main(String[] args) {
-        System.out.println("                                         ╔════════════════════════════════════╗\n" +
+                System.out.println("                                         ╔════════════════════════════════════╗\n" +
 
-"                                         ║    WELCOME TO MESOB HOTEL     ║\n" +
+"========================================)║    WELCOME TO MESOB HOTEL     ║\n" +
 "                                         ╚════════════════════════════════════╝");
         System.out.println("\n \n Welcome to our iconic Mesob Hotel, Where comfort meets tradition");
         System.out.println("\nPlease make a choice: ");
@@ -45,10 +45,14 @@ public class MesobHotel {
             case 1:
                 Admin_login A= new Admin_login();
                 A.check_admin_login();
+                System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
                 break;
             case 2:
-                 new Customer();
+                Customer v = new Customer();
+                v.customer_account();
+                System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
                 break;
+
             default:
                 System.out.print("Input invalid!!! ");
                 
