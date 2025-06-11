@@ -2,6 +2,7 @@
 package mesob.hotel;
 import java.util.Scanner;
 import admin.Admin_login;
+import customer.Customer;
 
 
 public class MesobHotel {
@@ -46,7 +47,7 @@ public class MesobHotel {
                 A.check_admin_login();
                 break;
             case 2:
-                customer_log_sign();
+                 new Customer();
                 break;
             default:
                 System.out.print("Input invalid!!! ");

@@ -46,6 +46,7 @@ public class Customer_signup {
             writer.write(email + "," + username + "," + password + "\n");
             writer.close();
             System.out.println("Signup successful! Account created.");
+            new Customer_login();
         } catch (IOException e) {
             System.out.println("Error saving user data: " + e.getMessage());
         }
