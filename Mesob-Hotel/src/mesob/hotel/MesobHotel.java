@@ -27,6 +27,8 @@ public class MesobHotel {
 //    }
 
     public static void main(String[] args) {
+       
+        
                 System.out.println("                                         ╔════════════════════════════════════╗\n" +
 
 "========================================)║    WELCOME TO MESOB HOTEL     ║\n" +

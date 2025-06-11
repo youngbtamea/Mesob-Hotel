@@ -28,7 +28,8 @@ public class Admin_home {
                 break;
             case 2:
                 System.out.println("Redirecting to ReserveRoom...");
-                new ReserveRoom(); 
+                ReserveRoom rr = new ReserveRoom();
+                rr.reserve();
                 System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
                 break;
             case 3:

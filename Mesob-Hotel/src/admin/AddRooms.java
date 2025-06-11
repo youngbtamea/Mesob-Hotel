@@ -1,12 +1,18 @@
 package admin;
 
+import common.RoomOperations;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class AddRooms {
+public class AddRooms implements RoomOperations {
 
     public AddRooms() {
+        addRoom();
+    }
+
+    @Override
+    public void addRoom() {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("===== Add Room Information =====");
@@ -25,7 +31,6 @@ public class AddRooms {
             System.out.println("Invalid price input! Setting price to 0.0");
         }
 
-        // Save to file
         saveRoomToFile(roomNumber, roomType, price);
     }
 

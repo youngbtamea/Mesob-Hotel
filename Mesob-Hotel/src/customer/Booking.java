@@ -9,7 +9,7 @@ public class Booking {
         BookingQueue queue = new BookingQueue();
 
         new AvailableRooms();
-        System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
+        System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-B-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
 
         System.out.print("Enter Room Number you want to reserve: ");
         String roomNumber = sc.nextLine();

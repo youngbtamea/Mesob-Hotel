@@ -3,14 +3,15 @@ package admin;
 import java.io.*;
 import java.util.Scanner;
 
-public class ReserveRoom {
+public class ReserveRoom implements RoomReservation {
 
-    public ReserveRoom() {
+    @Override
+    public void reserve() {
         Scanner sc = new Scanner(System.in);
-        String[][] rooms = new String[100][5]; // roomNumber, type, price, status, checkInTime
+        // Your current constructor logic moved here (minus `new ReserveRoom()` call)
+        String[][] rooms = new String[100][5]; 
         int count = 0;
 
-        // Step 1: Load existing rooms
         try {
             File file = new File("roomsinfo.txt");
             if (!file.exists()) {
@@ -45,7 +46,6 @@ public class ReserveRoom {
             return;
         }
 
-        // Step 2: Display rooms
         System.out.println("\n===== Room List =====");
         for (int i = 0; i < count; i++) {
             System.out.println("Room: " + rooms[i][0] +
@@ -55,7 +55,6 @@ public class ReserveRoom {
                                ", Check-in: " + rooms[i][4]);
         }
 
-        // Step 3: Ask admin to reserve a room
         System.out.print("\nEnter Room Number to Reserve: ");
         String target = sc.nextLine();
         boolean found = false;
@@ -70,7 +69,6 @@ public class ReserveRoom {
                     return;
                 }
 
-                // Step 4: Reserve
                 rooms[i][3] = "Reserved";
 
                 System.out.print("Enter Check-in Time (e.g., 2025-06-07 10:00AM): ");
@@ -85,10 +83,8 @@ public class ReserveRoom {
             new Admin_home();
             System.out.println("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
             return;
-           
         }
 
-        // Step 5: Save updated data
         try {
             FileWriter writer = new FileWriter("roomsinfo.txt", false);
             for (int i = 0; i < count; i++) {
